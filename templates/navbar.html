@@ -1,0 +1,17 @@
+{% load static %}
+
+<!-- Modern Navbar Section -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="{% url 'home' %}" class="navbar-brand">
+            <img src="{% static 'assets/home.png' %}" alt="Home" class="navbar-icon">
+        </a>
+        <ul class="navbar-menu">
+            <li class="bt"><a href="{% url 'backtracking' %}" class="navbar-link">Backtracking</a></li>
+            <li class="bf"><a href="{% url 'brute_force' %}" class="navbar-link">Brute Force</a></li>
+            <li class="ga"><a href="{% url 'genetic' %}" class="navbar-link">Genetic Algorithm</a></li>
+            <li class="aco"><a href="{% url 'aco' %}" class="navbar-link">Ant Colony</a></li>
+            <li class="pso"><a href="{% url 'pso' %}" class="navbar-link">Particle Swarm</a></li>
+        </ul>
+    </div>
+</nav>

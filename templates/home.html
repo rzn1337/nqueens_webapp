@@ -1,0 +1,137 @@
+{% comment %} {% load static %} {% endcomment %}
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Queens Project Showcase</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <main>
+        <section id="about">
+            <h2>About the N-Queens Problem</h2>
+            <p>
+                The N-Queens problem is a classic puzzle in which the goal is to place N chess queens on an N×N chessboard
+                so that no two queens threaten each other. This means that no two queens can share the same row, column, or diagonal.
+            </p>
+        </section>
+        <section id="visualizations">
+            <h2>Visualizations</h2>
+            <div id="visualization-container">
+                <!-- Placeholder for visualizations -->
+                <p>Interactive visualizations of N-Queens solutions will be displayed here.</p>
+            </div>
+        </section>
+        <section id="resources">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Eight_queens_puzzle" target="_blank">Wikipedia: Eight Queens Puzzle</a></li>
+                <li><a href="https://cp-algorithms.com/combinatorics/n-queens-problem.html" target="_blank">CP Algorithms: N-Queens Problem</a></li>
+                <li><a href="https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/" target="_blank">GeeksforGeeks: N-Queen Problem</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 N-Queens Project Showcase. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+ {% endcomment %}
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Queens Problem</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #D9AFD9;
+            background-image: linear-gradient(45deg, #D9AFD9 0%, #97D9E1 50%, #ffffff 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #000000;
+        }
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #D9AFD9;
+            background-image: linear-gradient(45deg, #D9AFD9 0%, #97D9E1 50%, #ffffff 100%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>About the N-Queens Problem</h1>
+    <p>The N-Queens problem is a classic puzzle in which the goal is to place N chess queens on an N×N chessboard so that no two queens threaten each other. This means that no two queens can share the same row, column, or diagonal.</p>
+    
+    <h2>Visualizations</h2>
+    <p>Interactive visualizations are made to better understand the solutions.</p>
+    
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Eight_queens_puzzle" target="_blank">Wikipedia: Eight Queens Puzzle</a></li>
+        <li><a href="https://cp-algorithms.com/" target="_blank">CP Algorithms: N-Queens Problem</a></li>
+        <li><a href="https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/" target="_blank">GeeksforGeeks: N-Queen Problem</a></li>
+    </ul>
+
+    <div class="button-container">
+        <button onclick="showVisualizations()">Project Showcase</button>
+    </div>
+</div>
+
+<script>
+    function showVisualizations() {
+        window.location.href = "{% url 'backtracking' %}";
+        // Add your visualization display logic here
+    }
+</script>
+
+</body>
+</html>
