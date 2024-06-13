@@ -31,12 +31,14 @@ def download_file(request):
     file_path = os.path.join(settings.BASE_DIR, 'nqueens_run_metrics.json')
     
     if os.path.exists(file_path):
-        
         with open(file_path, 'rb') as file:
             response = HttpResponse(file.read(), content_type='application/json')
-            response['Content-Disposition'] = f'attachment; filename={os.path.basename(file_path)}'
-            
+            response['Content-Disposition'] = f'attachment; filename="{os.path.basename(file_path)}"'
+        
+        # Ensure the response is fully constructed before attempting to remove the file
+        response['Content-Length'] = os.path.getsize(file_path)
         os.remove(file_path)
+        
         return response
     else:
         return HttpResponse("File does not exist")
